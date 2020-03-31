@@ -19,6 +19,8 @@ from register import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("register/", views.register, name="register"),  # <-- added
-   
+    path('', include('main.urls'), name="home"),
+    path("register/", views.register, name="register"),
+    path('', include("django.contrib.auth.urls")),
+
 ]
