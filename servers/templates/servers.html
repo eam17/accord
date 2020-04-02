@@ -1,0 +1,10 @@
+
+{% block servers %}
+    <ul>
+        {% for item in user.server.all %}
+            <li>{{ item.display_name }}</li>
+        {% empty %}
+            <li>Sorry, no athletes in this list.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

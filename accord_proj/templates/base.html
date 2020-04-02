@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,16 +16,8 @@
 </head>
 
 <body>
-  <div id="content" name="content" class="main">
-    <div class="row justify-content-center">
-      <div class="col-8">
-        <h1 class="mt-2">Accord</h1>
-        <hr class="mt-0 mb-4" />
-        {% block content %} {% endblock %}
-      </div>
-    </div>
-  </div>
-
+  <h1>Welcome, {{ request.user.username }}. <a href="/logout/">Logout</a></h1>
+  {% block content %}{% endblock %}
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
