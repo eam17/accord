@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'register.apps.RegisterConfig',
     "crispy_forms",
     "servers",
+    "channels",
 ]
 
 MIDDLEWARE = [

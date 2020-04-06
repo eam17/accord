@@ -2,9 +2,9 @@
 {% block servers %}
     <ul>
         {% for item in user.server.all %}
-            <li>{{ item.display_name }}</li>
+            <a href="{% url 'channels_index' item.server_id %}"><li>{{ item }}</li> </a>
         {% empty %}
-            <li>Sorry, no athletes in this list.</li>
+            <li>Sorry, no items in this list.</li>
         {% endfor %}
     </ul>
 {% endblock %}

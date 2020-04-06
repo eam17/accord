@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from register.views import register
 from servers.views import add_server, index
+from channels.views import channels_index
+#from channels.views import add_channel
 
 
 
@@ -25,7 +27,7 @@ urlpatterns = [
     path('', include('main.urls'), name="home"),
     path("register/", register, name="register"),
     path('', include("django.contrib.auth.urls")),
-    path("add_server/", add_server, name="add-server"),
-    path("servers/", index),
+    path("add_server/", add_server, name="add_server"),
+    path("/<int:pk>/", channels_index, name="channels_index"),
 
 ]
